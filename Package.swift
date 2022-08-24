@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "LyricsKit",
-            targets: ["LyricsCore", "LyricsService"]),
+            targets: ["LyricsCoreV2", "LyricsServiceV2"]),
     ],
     dependencies: [
         .package(url: "https://github.com/cx-org/CXShim", .upToNextMinor(from: "0.4.0")),
@@ -24,14 +24,16 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "LyricsCore",
-            dependencies: ["Regex", "SwiftCF"]),
+            name: "LyricsCoreV2",
+            dependencies: ["Regex", "SwiftCF"],
+            path: "Sources/LyricsCore"),
         .target(
-            name: "LyricsService",
-            dependencies: ["LyricsCore", "CXShim", "CXExtensions", "Regex", "Gzip"]),
+            name: "LyricsServiceV2",
+            dependencies: ["LyricsCoreV2", "CXShim", "CXExtensions", "Regex", "Gzip"],
+            path: "Sources/LyricsService"),
         .testTarget(
             name: "LyricsKitTests",
-            dependencies: ["LyricsCore", "LyricsService"],
+            dependencies: ["LyricsCoreV2", "LyricsServiceV2"],
             resources: [.copy("Resources")]),
     ]
 )
