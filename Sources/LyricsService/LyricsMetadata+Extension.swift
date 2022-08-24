@@ -8,7 +8,7 @@
 //
 
 import Foundation
-import LyricsCore
+import LyricsCoreV2
 
 extension Lyrics.Metadata.Key {
     public static var searchRequest = Lyrics.Metadata.Key("searchRequest")

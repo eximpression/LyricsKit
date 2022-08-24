@@ -8,7 +8,7 @@
 //
 
 import Foundation
-import LyricsCore
+import LyricsCoreV2
 
 private let mergeTimetagThreshold = 0.02
 

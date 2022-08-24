@@ -1,1 +1,1 @@
-@_exported import LyricsCore
+@_exported import LyricsCoreV2

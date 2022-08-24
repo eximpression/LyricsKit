@@ -8,7 +8,7 @@
 //
 
 import Foundation
-import LyricsCore
+import LyricsCoreV2
 
 private let translationBonus = 0.1
 private let inlineTimeTagBonus = 0.1
